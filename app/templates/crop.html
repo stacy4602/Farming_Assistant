@@ -1,0 +1,108 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="background">
+  <br /><br />
+  <div class="container-all" style="height: 900px">
+    <h2>
+      <b>Find out the most suitable crop to grow in your farm</b>
+    </h2>
+
+    <div style="width: 450px; height: 700px; margin: 0px auto">
+      <form method="POST" action="{{ url_for('crop_prediction') }}">
+        <div class="form-group">
+          <label for="Nitrogen"><b>Nitrogen</b></label>
+          <input
+            type="number"
+            class="form-control"
+            id="Nitrogen"
+            name="nitrogen"
+            placeholder="Enter the value (example:50)"
+            style="font-weight: bold"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="Phosphorous"><b>Phosphorous</b></label>
+          <input
+            type="number"
+            class="form-control"
+            id="Phosphorous"
+            name="phosphorous"
+            placeholder="Enter the value (example:50)"
+            style="font-weight: bold"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="Pottasium"><b>Pottasium</b></label>
+          <input
+            type="number"
+            class="form-control"
+            id="Pottasium"
+            name="pottasium"
+            placeholder="Enter the value (example:50)"
+            style="font-weight: bold"
+            device-width
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="ph"><b>ph level</b></label>
+          <input
+            type="number"
+            step="0.01"
+            class="form-control"
+            id="ph"
+            name="ph"
+            placeholder="Enter the value"
+            style="font-weight: bold"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="Rainfall"><b>Rainfall (in mm)</b></label>
+          <input
+            type="number"
+            step="0.01"
+            class="form-control"
+            id="Rainfall"
+            name="rainfall"
+            placeholder="Enter the value"
+            style="font-weight: bold"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="State"><b>State</b></label>
+          <select
+            onchange="print_city('state', this.selectedIndex);"
+            id="sts"
+            name="stt"
+            class="form-control"
+            style="font-weight: bold; color: black"
+            required
+          ></select>
+          <br />
+          <label for="City"><b>City</b></label>
+          <select
+            id="state"
+            class="form-control"
+            name="city"
+            style="font-weight: bold; color: black"
+            required
+          ></select>
+          <script language="javascript">
+            print_state("sts");
+          </script>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-info crop-predict">
+            Predict
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

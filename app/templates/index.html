@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Agro-Assist</title>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+    />
+
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    <script type="text/javascript">
+      var duplicate_google_translate_counter = 0; //this stops google adding button multiple times
+
+      function googleTranslateElementInit() {
+        if (duplicate_google_translate_counter == 0) {
+          new google.translate.TranslateElement(
+            { pageLanguage: "en" },
+            "google_translate_element"
+          );
+        }
+        duplicate_google_translate_counter++;
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/JavaScript" src="/static/scripts/cities.js"></script>
+
+    <!-- css files -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap css -->
+    <link
+      href="/static/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- custom css -->
+    <link href="/static/css/style.css" rel="stylesheet" />
+    <!-- fontawesome css -->
+    <link href="/static/css/home.css" rel="stylesheet" />
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="/static/css/styles.css" />
+
+    <!-- google fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+      rel="stylesheet"
+    />
+    <!-- //google fonts -->
+    <style>
+      h3 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        color: #ffffff;
+        background-color: rgba(77, 119, 78, 0.8);
+        height: 90px;
+        border: 4px solid #f1b24a;
+        border-radius: 15px 50px;
+        padding: 25px;
+        box-shadow: 5px 5px 5px #eeb457;
+      }
+
+      ::selection {
+        color: #fff;
+        background: #43affc;
+      }
+      .wrapper {
+        width: 400px;
+        background: rgba(77, 119, 78, 0.8);
+        border-radius: 7px;
+        box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+        border: 2px solid #f1b24a;
+        padding: 5px;
+      }
+      .wrapper header {
+        display: flex;
+        font-size: 21px;
+        font-weight: 500;
+        color: #43affc;
+        padding: 16px 15px;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+      }
+      header i {
+        font-size: 0em;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+      .wrapper.active header i {
+        margin-left: 5px;
+        font-size: 30px;
+      }
+      .wrapper .input-part {
+        margin: 20px 25px 30px;
+      }
+      .wrapper.active .input-part {
+        display: none;
+      }
+      .input-part .info-txt {
+        display: none;
+        font-size: 17px;
+        text-align: center;
+        padding: 12px 10px;
+        border-radius: 7px;
+        margin-bottom: 15px;
+      }
+      .input-part .info-txt.error {
+        color: #721c24;
+        display: block;
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+      }
+      .input-part .info-txt.pending {
+        color: #0c5460;
+        display: block;
+        background: #d1ecf1;
+        border: 1px solid #bee5eb;
+      }
+      .input-part :where(input, button) {
+        width: 100%;
+        height: 55px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        border-radius: 7px;
+      }
+      .input-part input {
+        text-align: center;
+        padding: 0 15px;
+        border: 1px solid #ccc;
+      }
+      .input-part input:is(:focus, :valid) {
+        border: 2px solid #43affc;
+      }
+      .input-part input::placeholder {
+        color: #bfbfbf;
+      }
+      .input-part .separator {
+        height: 1px;
+        width: 100%;
+        margin: 25px 0;
+        background: #ccc;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .separator::before {
+        content: "or";
+        color: #b3b3b3;
+        font-size: 19px;
+        padding: 0 15px;
+        background: #fff;
+      }
+      .input-part button {
+        color: #fff;
+        cursor: pointer;
+        background: #03bef6;
+        transition: 0.3s ease;
+      }
+      .input-part button:hover {
+        background: #02f8cf;
+      }
+
+      .wrapper .weather-part {
+        display: none;
+        margin: 30px 0 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .wrapper.active .weather-part {
+        display: flex;
+      }
+      .weather-part img {
+        max-width: 125px;
+      }
+      .weather-part .temp {
+        display: flex;
+        font-weight: 500;
+        font-size: 72px;
+      }
+      .weather-part .temp .numb {
+        font-weight: 600;
+      }
+      .weather-part .temp .deg {
+        font-size: 40px;
+        display: block;
+        margin: 10px 5px 0 0;
+      }
+      .weather-part .weather {
+        font-size: 21px;
+        text-align: center;
+        margin: -5px 20px 15px;
+      }
+      .weather-part .location {
+        display: flex;
+        font-size: 19px;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 30px;
+        align-items: flex-start;
+      }
+      .location i {
+        font-size: 22px;
+        margin: 4px 5px 0 0;
+      }
+      .weather-part .bottom-details {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid #f1b24a;
+      }
+      .bottom-details .column {
+        display: flex;
+        width: 100%;
+        padding: 15px 0;
+        align-items: center;
+        justify-content: center;
+      }
+      .column i {
+        color: #5dbbff;
+        font-size: 40px;
+      }
+      .column.humidity {
+        border-left: 1px solid #f1b24a;
+      }
+      .column .details {
+        margin-left: 3px;
+      }
+      .details .temp,
+      .humidity span {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: -3px;
+      }
+      .details .temp .deg {
+        margin: 0;
+        font-size: 17px;
+        padding: 0 2px 0 1px;
+      }
+      .column .details p {
+        font-size: 14px;
+        margin-top: -6px;
+      }
+      .humidity i {
+        font-size: 37px;
+      }
+      .location_curr {
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 15px 50px;
+        font-size: 21px;
+        background-color: rgba(77, 119, 78, 0.8);
+        border: 5px solid #f1b24a;
+      }
+      .location_curr:hover {
+        background-color: #f1b24a;
+        border: 4px solid rgb(77, 119, 78);
+        border-radius: 50px 15px;
+        color: #164a41;
+      }
+      .cityname {
+        background-clip: padding-box;
+        border: 3px solid #f1b24a;
+        border-radius: 15px 25px;
+      }
+      p,
+      i,
+      span,
+      .weather {
+        color: white;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- banner -->
+    <section class="banner_w3lspvt" id="home">
+      <div class="csslider infinity" id="slider1">
+        <div class="banner-top">
+          <!-- Navigation -->
+          <nav class="navbar navbar-expand-lg navbar-dark static-top">
+            <div class="container">
+              <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img
+                  src="{{url_for ('static', filename='images/logo-1.png')}}"
+                  style="width: 100px; height: 70px"
+                  alt=""
+                />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('home') }}"
+                      >Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('crop_recommend') }}"
+                      >Crop</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                   <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="{{ url_for('weather_recommendation') }}"
+                      >Your Current Location</a
+                    >
+                  </li>
+                  <li>
+                    <div className="">
+                      <div className="" id="google_translate_element"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="overlay">
+            <div class="container">
+              <div class="w3layouts-banner-info text-center">
+                <h3 class="text-wh">Agro-Assist</h3>
+                <h4 class="text-wh mx-auto my-4">
+                  <b>Farming Assistance System Using XGBoost and ResNet ML Algorithms
+                  </b>
+                </h4>
+                <br />
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <div class="wrapper col-lg-6col-sm-6">
+                  <p class="text-center" style="color: #f1b24a; font-weight: bold; font-size: 25px">
+                    Weather Report
+                  </p>
+                  <section class="input-part">
+                    <p class="info-txt"></p>
+                    <div class="content">
+                      <input
+                        name="cityName"
+                        ype="text"
+                        spellcheck="false"
+                        placeholder="Welcome"
+                        class="cityname"
+                        required
+                      />
+                      <br /><button
+                        class="location_curr"
+                        style="background-color: rgba(77, 119, 78, 0.8)"
+                      >
+                        Current Location Weather
+                      </button>
+                    </div>
+                  </section>
+                  <section class="weather-part">
+                    <img src="" alt="Weather Icon" />
+                    <div class="temp">
+                      <span class="numb">_</span>
+                      <span class="deg">°</span>
+                      <span>C</span>
+                    </div>
+                    <div class="weather">_ _</div>
+                    <div class="location">
+                      <i class="bx bx-map"></i>
+                      <span>_, _</span>
+                    </div>
+                    <div class="bottom-details">
+                      <div class="column feels">
+                        <i class="bx bxs-thermometer"></i>
+                        <div class="details">
+                          <div class="temp">
+                            <span class="numb-2">_</span>
+                            <span class="deg">°</span><span style="color:white">C</span>
+                          </div>
+                          <p>Feels like</p>
+                        </div>
+                      </div>
+                      <div class="column humidity">
+                        <i class="bx bxs-droplet-half"></i>
+                        <div class="details">
+                          <span>_</span>
+                          <p>Humidity</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //banner -->
+    <!-- Products & Services -->
+    
+  <section class="blog py-5" style="background-image:linear-gradient(rgba(47, 82, 47,0.6),rgba(150, 219, 153, 0.6));">
+      <div class="container py-md-5">
+        <h3 class="heading mb-sm-5 mb-4 text-center">Our Assistance</h3>
+        <div class="row blog-grids">
+          <div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+            <img
+              src="{{ url_for('static', filename='images/s3.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <a href="{{ url_for('crop_recommend') }}">
+              <div class="blog-info">
+                <h4>Crop</h4>
+
+                <p class="mt-2 para">
+                  Recommending what type of crops is best suited to be planted considering various conditions
+                </p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5"
+          >
+            <img
+              src="{{ url_for('static', filename='images/s2.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <a href="{{ url_for('fertilizer_recommendation') }}">
+              <div class="blog-info">
+                <h4>Fertilizer</h4>
+                <p class="mt-2 para">
+                  Recommending what type of fertilizer is best suited for the particular soil along with crop rotation suggestions
+                </p>
+              </div>
+            </a>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5"
+          >
+            <img
+              src="{{ url_for('static', filename='images/s4.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+
+            <!-- <img src="images/s4.jpg" class="img-fliud" alt="" /> -->
+            <a href="{{ url_for('disease_prediction') }}">
+              <div class="blog-info">
+                <h4>Crop Disease</h4>
+                <p class="mt-2 para">
+                  Predicting the disease that affects the plant along with its' causes and cure
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //Products & Services -->
+
+	<!-- footer -->
+	<footer class="text-center py-5">
+		<div class="container py-md-3">
+			<!-- logo -->
+			<h1 class="logo2 text-center">
+				<a href="{{ url_for('home') }}">
+					AGRO-ASSIST
+				</a>
+			</h1>
+			<!-- //logo -->
+			<!-- address -->
+			<div class="contact-left-footer mt-4">
+				<!-- <a href="community.html">Community</a> -->
+				</p>
+			</div>
+			<div class="w3l-copy text-center">
+				<p class="text-da">A Farming Assistance System<br> </p><br><br>
+        <p>&#9743; Help: 6379690101</p>
+			</div>
+			
+			
+			
+		</div>
+	</footer>
+	<!-- //footer -->
+
+	<!-- move top icon -->
+	<a href="#home" class="move-top text-center"></a>
+	<!-- //move top icon -->
+    <script>
+      const wrapper = document.querySelector(".wrapper"),
+        inputPart = document.querySelector(".input-part"),
+        infoTxt = inputPart.querySelector(".info-txt"),
+        inputField = inputPart.querySelector("input"),
+        locationBtn = inputPart.querySelector("button"),
+        weatherPart = wrapper.querySelector(".weather-part"),
+        wIcon = weatherPart.querySelector("img"),
+        arrowBack = wrapper.querySelector("header i");
+
+      let api;
+
+      inputField.addEventListener("keyup", (e) => {
+        // if user pressed enter btn and input value is not empty
+        if (e.key == "Enter" && inputField.value != "") {
+          requestApi(inputField.value);
+        }
+      });
+
+      locationBtn.addEventListener("click", () => {
+        if (navigator.geolocation) {
+          // if browser support geolocation api
+          navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        } else {
+          alert("Your browser not support geolocation api");
+        }
+      });
+
+      function requestApi(city) {
+        api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=208912e57d4dc5b2cbd3060ef955416a`;
+        fetchData();
+      }
+
+      function onSuccess(position) {
+        const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
+        api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=208912e57d4dc5b2cbd3060ef955416a`;
+        fetchData();
+      }
+
+      function onError(error) {
+        // if any error occur while getting user location then we'll show it in infoText
+        infoTxt.innerText = error.message;
+        infoTxt.classList.add("error");
+      }
+
+      function fetchData() {
+        infoTxt.innerText = "Getting weather details...";
+        infoTxt.classList.add("pending");
+        // getting api response and returning it with parsing into js obj and in another
+        // then function calling weatherDetails function with passing api result as an argument
+        fetch(api)
+          .then((res) => res.json())
+          .then((result) => weatherDetails(result))
+          .catch(() => {
+            infoTxt.innerText = "Something went wrong";
+            infoTxt.classList.replace("pending", "error");
+          });
+      }
+
+      function weatherDetails(info) {
+        if (info.cod == "404") {
+          // if user entered city name isn't valid
+          infoTxt.classList.replace("pending", "error");
+          infoTxt.innerText = `${inputField.value} isn't a valid city name`;
+        } else {
+          //getting required properties value from the whole weather information
+          const city = info.name;
+          const country = info.sys.country;
+          const { description, id } = info.weather[0];
+          const { temp, feels_like, humidity } = info.main;
+
+          // using custom weather icon according to the id which api gives to us
+          if (id == 800) {
+            wIcon.src = "{{ url_for('static', filename='images/clear.svg') }}";
+          } else if (id >= 200 && id <= 232) {
+            wIcon.src = "{{ url_for('static', filename='images/storm.svg') }}";
+          } else if (id >= 600 && id <= 622) {
+            wIcon.src = "{{ url_for('static', filename='images/snow.svg') }}";
+          } else if (id >= 701 && id <= 781) {
+            wIcon.src = "{{ url_for('static', filename='images/haze.svg') }}";
+          } else if (id >= 801 && id <= 804) {
+            wIcon.src = "{{ url_for('static', filename='images/cloud.svg') }}";
+          } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
+            wIcon.src = "{{ url_for('static', filename='images/rain.svg') }}";
+          }
+
+          //passing a particular weather info to a particular element
+          weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+          weatherPart.querySelector(".weather").innerText = description;
+          weatherPart.querySelector(
+            ".location span"
+          ).innerText = `${city}, ${country}`;
+          weatherPart.querySelector(".temp .numb-2").innerText =
+            Math.floor(feels_like);
+          weatherPart.querySelector(
+            ".humidity span"
+          ).innerText = `${humidity}%`;
+          infoTxt.classList.remove("pending", "error");
+          infoTxt.innerText = "";
+          inputField.value = "";
+          wrapper.classList.add("active");
+        }
+      }
+
+      arrowBack.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

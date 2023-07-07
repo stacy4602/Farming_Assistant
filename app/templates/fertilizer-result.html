@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+  .mt-0 {
+    margin-top: 50 !important;
+  }
+  .card-body {
+    background-color: #f5f1f1;
+    border: 3px solid #f1b24a;
+    color: rgb(21, 59, 21);
+    border-radius: 15px 50px;
+    height:auto;
+  }
+</style>
+<div class="background"><br><br>
+  <div class="container-all ">
+    
+    <h1 class="text-center" style="color:white">
+      <b>{{ recommendation }}</b></h1>
+    <hr><div class="card-body"><h1>CROP ROTATION:</h1>
+     <b> <p class="text-center" style="font-size: 25px;">Recommended crops for <em>{{ crop_name }} </em> Crop Rotation : <strong>{{ crop_rotation }}</strong></p></b>
+  </div>
+  </div></div>
+{% endblock %}
