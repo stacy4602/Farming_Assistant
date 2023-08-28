@@ -6,3 +6,4 @@
 
 ## Screenshots
 ### HomePage
+![Image](app/static/images/Homepage.png)
