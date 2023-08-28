@@ -6,5 +6,4 @@
 
 ## Screenshots
 ### HomePage
-
-! [Alt Homepage] (app/static/images/Homepage.png)
+![Homepage](https://github.com/stacy4602/Farming_Assistant/assets/92261049/5ff24934-ad97-455e-93bf-7377eac3123e)
